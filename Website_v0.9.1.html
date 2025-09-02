@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fidantic — Specialist AI for Compliance</title>
+  <meta name="description" content="Turn complex regulation into auditable answers in seconds. Where GRC ends, we begin." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <style>
+    :root{
+      --fidantic-brown:#7B4B3A;
+      --fidantic-cream:#EADBC8;
+      --fidantic-ink:#0f172a;
+    }
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(10px) } to { opacity: 1; transform: translateY(0) } }
+    .animate-in { animation: fadeInUp 600ms ease-out both; }
+    html { scroll-behavior: smooth; }
+    .backdrop-blur-open{ filter: blur(4px); }
+  </style>
+</head>
+<body class="bg-white text-slate-900 antialiased">
+  <!-- Header / Logo -->
+  <header class="border-b border-slate-200">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex h-16 items-center gap-3">
+        <img src="logo2.png" alt="Fidantic" class="h-10 w-auto select-none" />
+        <span class="text-2xl font-serif" style="color:var(--fidantic-cream); text-shadow: 0 0 1px rgba(0,0,0,0.3);">
+          <span style="color:var(--fidantic-brown)">
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Wrapper to blur on modal open -->
+  <div id="pageWrap">
+    <!-- Hero / Home -->
+    <section id="home" class="relative overflow-hidden">
+      <div class="mx-auto max-w-7xl px-4 py-16 sm:py-24 sm:px-6 lg:px-8">
+        <div class="grid items-center gap-12 lg:grid-cols-2">
+          <div class="animate-in">
+            <h1 class="text-3xl font-semibold leading-tight sm:text-5xl" style="color:var(--fidantic-brown)">
+              Specialist AI for Regulatory Compliance
+            </h1>
+            <p class="mt-5 max-w-xl text-base leading-relaxed text-slate-700 sm:text-lg">
+              Compliance consumes billions of dollars and still market participants face record fines. Our engine produces auditable, evidence‑backed answers in seconds — replacing layers of manual effort with intelligent automation and human oversight.
+            </p>
+            <div class="mt-8 flex flex-wrap items-center gap-3" id="cta">
+              <a href="#problem" class="rounded-xl px-5 py-3 text-sm font-semibold text-white hover:opacity-95" style="background-color:var(--fidantic-brown)">See the Problem</a>
+              <a href="#solution" class="rounded-xl px-5 py-3 text-sm font-semibold ring-1 ring-slate-300 text-slate-900 hover:bg-slate-50">Explore the Solution</a>
+            </div>
+          </div>
+          <!-- Visual Panel -->
+          <div class="animate-in lg:justify-self-end">
+            <div class="relative isolate overflow-hidden rounded-3xl border border-slate-200 bg-gradient-to-br from-white to-slate-50 p-6 shadow-2xl">
+              <div class="grid gap-4 sm:grid-cols-2">
+              <!-- Dynamic Intelligence / Live Traffic (LEFT, branded) -->
+              <div class="rounded-2xl border border-[#7B4B3A] bg-[#EADBC8]/30 p-4 transition-all duration-200 hover:bg-[#EADBC8]/50 hover:-translate-y-0.5 hover:shadow-lg">
+                <div class="mb-3 flex items-center gap-2 text-[#7B4B3A]">
+                  <span class="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-[#7B4B3A]/10 ring-1 ring-[#7B4B3A]/30">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 19V5l6 4 6-4v14l-6-4-6 4z" stroke-width="1.5"/><path d="M8 12h8" stroke-width="1.5"/></svg>
+                  </span>
+                  <span class="text-sm font-semibold">Dynamic Intelligence</span>
+                </div>
+                <ul class="space-y-2 text-sm text-[#7B4B3A]">
+                  <li>Live regulatory analysis</li>
+                  <li>Evidence‑backed answers</li>
+                  <li>Assurance, not just workflow</li>
+                </ul>
+              </div>
+              <!-- Static GRC / Paper Map (RIGHT, grayscale) -->
+              <div class="rounded-2xl border border-slate-200 bg-white p-4 transition-colors duration-200 hover:bg-slate-50">
+                <div class="mb-3 flex items-center gap-2 text-slate-800">
+                  <span class="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-slate-100 ring-1 ring-slate-200">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="text-slate-500"><path d="M3 7l6-3 6 3 6-3v13l-6 3-6-3-6 3V7z" stroke-width="1.5"/></svg>
+                  </span>
+                  <span class="text-sm font-semibold">Static GRC</span>
+                </div>
+                <ul class="space-y-2 text-sm text-slate-600">
+                  <li>Paper‑map mindset</li>
+                  <li>Manual interpretation</li>
+                  <li>Workflow over assurance</li>
+                </ul>
+              </div>
+            </div>
+<div class="pointer-events-none absolute -right-24 -top-24 h-64 w-64 rounded-full" style="background: color-mix(in oklab, var(--fidantic-brown) 10%, white); filter: blur(36px);"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Problem -->
+    <section id="problem" class="border-t border-slate-200">
+      <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-3xl text-center">
+          <h2 class="text-2xl font-semibold sm:text-4xl" style="color:var(--fidantic-brown)">Traditional Compliance Can’t Keep Up</h2>
+          <p class="mt-4 text-slate-700">Rising regulatory volume and complexity. Unwieldy manual processes. Headline fines keep coming.</p>
+        </div>
+        <div class="mt-12 grid gap-6 sm:grid-cols-3">
+          <div class="rounded-2xl border border-slate-200 bg-white p-6">
+            <p class="text-sm font-semibold" style="color:var(--fidantic-brown)">Rising Burden</p>
+            <p class="mt-2 text-sm text-slate-700">Markets businesses face ever‑growing obligations across jurisdictions, products, functions, and lifecycles.</p>
+          </div>
+          <div class="rounded-2xl border border-slate-200 bg-white p-6">
+            <p class="text-sm font-semibold" style="color:var(--fidantic-brown)">Manual Costs</p>
+            <p class="mt-2 text-sm text-slate-700">Increasing demand across compliance, legal, and operations spent on interpretation, gap analysis, and implementing controls.</p>
+          </div>
+          <div class="rounded-2xl border border-slate-200 bg-white p-6">
+            <p class="text-sm font-semibold" style="color:var(--fidantic-brown)">Persistent Risk</p>
+            <p class="mt-2 text-sm text-slate-700">Despite the spend, risks and gaps remain and enforcement actions still make headlines.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Solution -->
+    <section id="solution" class="border-t border-slate-200">
+      <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-3xl text-center">
+          <h2 class="text-2xl font-semibold sm:text-4xl" style="color:var(--fidantic-brown)">Your Compliance Team's New Advantage</h2>
+          <p class="mt-4 text-slate-700">Compliance assurance built on dynamic regulatory intelligence and auditable answers.</p>
+        </div>
+
+        <div class="mt-12 grid gap-6 sm:grid-cols-3">
+          <div class="rounded-2xl border border-slate-200 bg-white p-6">
+            <p class="text-sm font-semibold" style="color:var(--fidantic-brown)">Dynamic Regulatory Intelligence</p>
+            <p class="mt-2 text-sm text-slate-700">Real‑time retrieval and analysis across rule text, rulemaking, FAQs, no‑action letters, and enforcement.</p>
+          </div>
+          <div class="rounded-2xl border border-slate-200 bg-white p-6">
+            <p class="text-sm font-semibold" style="color:var(--fidantic-brown)">Evidence‑Backed Assurance</p>
+            <p class="mt-2 text-sm text-slate-700">Every answer pinned to sources and scored for accuracy, coverage, confidence, and consistency.</p>
+          </div>
+          <div class="rounded-2xl border border-slate-200 bg-white p-6">
+            <p class="text-sm font-semibold" style="color:var(--fidantic-brown)">Efficiency at Scale</p>
+            <p class="mt-2 text-sm text-slate-700">Replace weeks of manual effort with minutes of certainty, with human oversight for accountability.</p>
+          </div>
+        </div>
+
+        <div class="mt-12 grid items-stretch gap-6 lg:grid-cols-2">
+          <!-- Today -->
+          <div class="rounded-3xl border border-slate-200 bg-white p-6">
+            <p class="text-sm font-semibold" style="color:var(--fidantic-brown)">Today</p>
+            <ul class="mt-3 list-disc space-y-2 pl-5 text-sm text-slate-700">
+              <li>Manual reviews by cross‑functional teams</li>
+              <li>Inconsistent outcomes and high costs</li>
+              <li>Limited audit trail, slow to respond</li>
+            </ul>
+          </div>
+          <!-- With Us -->
+          <div class="rounded-3xl border border-slate-200 p-6" style="background: color-mix(in oklab, var(--fidantic-cream) 25%, white)">
+            <p class="text-sm font-semibold" style="color:var(--fidantic-brown)">With Us</p>
+            <ul class="mt-3 list-disc space-y-2 pl-5 text-sm" style="color: color-mix(in oklab, var(--fidantic-brown) 80%, black)">
+              <li>Documented, auditable answers with pinned citations</li>
+              <li>Built-in QA process ensure every response is consistent and evidence-backed</li>
+              <li>Minutes, not weeks — with human‑in‑the‑loop oversight</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Bottom CTA -->
+        <div class="mt-16 text-center">
+          <button id="openModal" class="rounded-xl px-6 py-3 text-sm font-semibold text-white hover:opacity-95" style="background-color:var(--fidantic-brown)">Contact Us</button>
+
+        </div>
+      </div>
+    </section>
+  </div> <!-- /#pageWrap -->
+
+  <!-- Contact Modal -->
+  <div id="contactModal" class="fixed inset-0 z-50 hidden">
+    <!-- Backdrop -->
+    <div id="backdrop" class="absolute inset-0 bg-black/40"></div>
+    <!-- Centered card -->
+    <div class="absolute inset-0 grid place-items-center px-4">
+      <form id="contactForm" class="w-full max-w-lg rounded-2xl bg-white p-6 shadow-2xl ring-1 ring-slate-200">
+        <div class="mb-4 flex items-center gap-3">
+          <img src="logo2.png" alt="Fidantic" class="h-8 w-auto" />
+          <h3 class="text-lg font-semibold m-0" style="color:var(--fidantic-brown)"></h3>
+        </div>
+        <p class="mb-4 text-xs text-slate-500">
+        <div class="grid gap-4 sm:grid-cols-2">
+          <div>
+            <label class="block text-sm text-slate-700 mb-1">Name</label>
+            <input required name="name" class="w-full rounded-lg border border-slate-300 px-3 py-2 outline-none focus:ring-2 focus:ring-[var(--fidantic-brown)]" />
+          </div>
+          <div>
+            <label class="block text-sm text-slate-700 mb-1">Organization</label>
+            <input required name="org" class="w-full rounded-lg border border-slate-300 px-3 py-2 outline-none focus:ring-2 focus:ring-[var(--fidantic-brown)]" />
+          </div>
+          <div class="sm:col-span-2">
+            <label class="block text-sm text-slate-700 mb-1">Email</label>
+            <input required type="email" name="email" class="w-full rounded-lg border border-slate-300 px-3 py-2 outline-none focus:ring-2 focus:ring-[var(--fidantic-brown)]" />
+          </div>
+          <div class="sm:col-span-2">
+            <label class="block text-sm text-slate-700 mb-1">Message</label>
+            <textarea required name="message" rows="4" class="w-full rounded-lg border border-slate-300 px-3 py-2 outline-none focus:ring-2 focus:ring-[var(--fidantic-brown)]"></textarea>
+          </div>
+        </div>
+        <div class="mt-6 flex items-center justify-end gap-3">
+          <button type="button" id="cancelModal" class="rounded-xl px-4 py-2 text-sm ring-1 ring-slate-300 hover:bg-slate-50">Cancel</button>
+          <button type="submit" id="sendBtn" class="rounded-xl px-5 py-2 text-sm font-semibold text-white hover:opacity-95 disabled:opacity-50" style="background-color:var(--fidantic-brown)">Send</button>
+        </div>
+        <p class="mt-3 text-xs text-slate-500">
+
+        <!-- status messages -->
+        <div id="status" class="mt-4 text-sm hidden"></div>
+
+        <!-- TODO: Replace the placeholders below with your EmailJS credentials:
+             window.emailjs.init('PUBLIC_KEY');
+             const SERVICE_ID  = 'YOUR_SERVICE_ID';
+             const TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
+        -->
+        <script>
+          // Initialize EmailJS (REPLACE 'PUBLIC_KEY' below)
+          window.emailjs.init('5WwInWM_7Txcvvwoo'); // TODO: your EmailJS public key
+
+          const SERVICE_ID = 'service_hjpi4ze';   // TODO: your EmailJS service ID
+          const TEMPLATE_ID = 'template_kfycvab'; // TODO: your EmailJS template ID
+
+          const formEl = document.currentScript.closest('form');
+          formEl.addEventListener('submit', async function(e){
+            e.preventDefault();
+            const sendBtn = document.getElementById('sendBtn');
+            const statusEl = document.getElementById('status');
+            sendBtn.disabled = true;
+            statusEl.className = 'mt-4 text-sm text-slate-600';
+            statusEl.textContent = 'Sending…';
+            statusEl.classList.remove('hidden');
+
+            const formData = {
+              name: formEl.querySelector('[name=\"name\"]').value,
+              org: formEl.querySelector('[name=\"org\"]').value,
+              email: formEl.querySelector('[name=\"email\"]').value,
+              message: formEl.querySelector('[name=\"message\"]').value
+            };
+
+            try {
+              // EmailJS will use your template to send to ash@fidantic.com
+              await emailjs.send(SERVICE_ID, TEMPLATE_ID, formData);
+              statusEl.textContent = 'Thanks — your message has been sent.';
+              statusEl.className = 'mt-4 text-sm text-green-700';
+              formEl.reset();
+              setTimeout(()=>{
+                document.getElementById('contactModal').classList.add('hidden');
+                document.getElementById('pageWrap').classList.remove('backdrop-blur-open');
+                statusEl.classList.add('hidden');
+              }, 1200);
+            } catch (err) {
+              console.error(err);
+              statusEl.textContent = 'Sorry, something went wrong. Please try again or email ash@fidantic.com.';
+              statusEl.className = 'mt-4 text-sm text-red-700';
+            } finally {
+              sendBtn.disabled = false;
+            }
+          });
+        </script>
+      </form>
+    </div>
+  </div>
+
+  
+  <footer class="border-t border-slate-200 py-10">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center text-sm text-slate-600">
+      <p class="mb-2">Fidantic Ltd</p>
+      <p class="mb-2">167-169 Great Portland Street, London W1W 5PF</p>
+      <p class="mb-2">Company Number 16535369</p>
+      <button id="openPrivacy" class="mt-4 underline text-slate-500 hover:text-slate-800">Privacy Policy</button>
+      <p class="mt-4">© <span id="year"></span> Fidantic Ltd. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Privacy Policy Modal -->
+  <div id="privacyModal" class="fixed inset-0 z-50 hidden">
+    <div id="privacyBackdrop" class="absolute inset-0 bg-black/40"></div>
+    <div class="absolute inset-0 grid place-items-center px-4">
+      <div class="w-full max-w-2xl rounded-2xl bg-white p-6 shadow-2xl ring-1 ring-slate-200 overflow-y-auto max-h-[80vh]">
+        <h3 class="text-lg font-semibold mb-4" style="color:var(--fidantic-brown)">Privacy Policy</h3>
+        <p class="text-sm text-slate-700 mb-3">
+          Fidantic Ltd (167–169 Great Portland Street, London W1W 5PF, Company Number 16535369) is the data controller for information collected through this website.
+        </p>
+        <p class="text-sm text-slate-700 mb-2"><strong>What we collect</strong><br/>
+          When you use our contact form, we collect your name, organisation, email address, and the message you provide.
+        </p>
+        <p class="text-sm text-slate-700 mb-2"><strong>How we use your data</strong><br/>
+          We use this information only to respond to your enquiry. The legal basis for this processing is our legitimate interest in running our business and responding to potential clients, or your consent when you choose to submit the form.
+        </p>
+        <p class="text-sm text-slate-700 mb-2"><strong>Sharing and storage</strong><br/>
+          Form submissions are processed securely and delivered to our email account via our service provider, EmailJS. We do not sell or otherwise share your information. Your data may be processed outside the UK/EU, but appropriate safeguards are in place.
+        </p>
+        <p class="text-sm text-slate-700 mb-2"><strong>How long we keep it</strong><br/>
+          We retain enquiry data for up to 24 months, unless you ask us to delete it sooner.
+        </p>
+        <p class="text-sm text-slate-700 mb-2"><strong>Your rights</strong><br/>
+          Under UK and EU data protection law you have the right to request access to your data, ask for corrections or deletion, object to or restrict processing, request data portability, and withdraw your consent (where applicable).
+          To exercise these rights, email <a href="mailto:ash@fidantic.com" class="underline">ash@fidantic.com</a>. You also have the right to lodge a complaint with the UK Information Commissioner’s Office (ICO).
+        </p>
+        <p class="text-sm text-slate-700"><strong>Security</strong><br/>
+          We take reasonable measures to keep your information secure.
+        </p>
+
+
+        
+    <div class="mt-6 text-right"><button id="closePrivacy" class="rounded-xl px-4 py-2 text-sm ring-1 ring-slate-300 hover:bg-slate-50">Close</button>
+        <p class="mt-4 text-xs text-slate-500"><a href="privacy.html" class="underline">View full policy</a></p>
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+    // Modal controls & blur
+    const openBtn = document.getElementById('openModal');
+    const modal = document.getElementById('contactModal');
+    const backdrop = document.getElementById('backdrop');
+    const cancelBtn = document.getElementById('cancelModal');
+    const pageWrap = document.getElementById('pageWrap');
+
+    function openModal(){
+      modal.classList.remove('hidden');
+      pageWrap.classList.add('backdrop-blur-open');
+    }
+    function closeModal(){
+      modal.classList.add('hidden');
+      pageWrap.classList.remove('backdrop-blur-open');
+    }
+    openBtn.addEventListener('click', openModal);
+    cancelBtn.addEventListener('click', closeModal);
+    backdrop.addEventListener('click', closeModal);
+    document.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') closeModal(); });
+
+    
+    // Privacy modal controls
+    const openPrivacy = document.getElementById('openPrivacy');
+    const privacyModal = document.getElementById('privacyModal');
+    const privacyBackdrop = document.getElementById('privacyBackdrop');
+    const closePrivacy = document.getElementById('closePrivacy');
+
+    function openPrivacyModal(){
+      privacyModal.classList.remove('hidden');
+      pageWrap.classList.add('backdrop-blur-open');
+    }
+    function closePrivacyModal(){
+      privacyModal.classList.add('hidden');
+      pageWrap.classList.remove('backdrop-blur-open');
+    }
+    openPrivacy.addEventListener('click', openPrivacyModal);
+    closePrivacy.addEventListener('click', closePrivacyModal);
+    privacyBackdrop.addEventListener('click', closePrivacyModal);
+    document.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') closePrivacyModal(); });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
