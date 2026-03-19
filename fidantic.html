@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fidantic</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Crimson+Text:ital@0;1&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; }
+    body {
+      background: #F5F0E8;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'EB Garamond', Georgia, serif;
+      padding: 4rem 2rem;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      max-width: 720px;
+      width: 100%;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 3.5rem;
+    }
+    .logo-bars { width: 44px; height: auto; flex-shrink: 0; }
+    .logo-name {
+      font-family: 'EB Garamond', Georgia, serif;
+      font-size: 32px;
+      font-weight: 400;
+      color: #5C2E14;
+      letter-spacing: 0.01em;
+      line-height: 1;
+    }
+    .tagline {
+      font-family: 'EB Garamond', Georgia, serif;
+      font-size: clamp(38px, 6vw, 54px);
+      font-weight: 400;
+      color: #3B1A0A;
+      line-height: 1.15;
+      margin-bottom: 2.5rem;
+    }
+    .divider {
+      width: 48px;
+      height: 2px;
+      background: #9C4A2A;
+      margin-bottom: 2.5rem;
+    }
+    .areas {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      gap: 10px;
+      justify-content: center;
+      margin-bottom: 4rem;
+    }
+    .area {
+      font-family: 'Crimson Text', Georgia, serif;
+      font-size: 17px;
+      font-style: italic;
+      color: #7A3520;
+      background: #E8DDD0;
+      padding: 8px 22px;
+      border-radius: 20px;
+      white-space: nowrap;
+    }
+    .contact {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+    .contact-label {
+      font-size: 10px;
+      font-family: 'Crimson Text', Georgia, serif;
+      font-style: italic;
+      color: #B08070;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+    .contact a {
+      font-family: 'EB Garamond', Georgia, serif;
+      font-size: 18px;
+      color: #7A3520;
+      text-decoration: none;
+      letter-spacing: 0.01em;
+      transition: color 0.2s;
+    }
+    .contact a:hover { color: #5C2E14; }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <div class="logo">
+      <svg class="logo-bars" viewBox="0 0 100 90" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0"  y="14" width="19" height="62" rx="3" fill="#5C2E14"/>
+        <rect x="27" y="0"  width="19" height="90" rx="3" fill="#9C4A2A"/>
+        <rect x="54" y="22" width="19" height="54" rx="3" fill="#C8845A"/>
+        <rect x="81" y="38" width="19" height="38" rx="3" fill="#D4A882"/>
+      </svg>
+      <span class="logo-name">Fidantic</span>
+    </div>
+
+    <p class="tagline">Agent-ready data for<br>financial services.</p>
+
+    <div class="divider"></div>
+
+    <div class="areas">
+      <span class="area">regulatory accuracy</span>
+      <span class="area">financial taxonomy</span>
+      <span class="area">machine-readable structure</span>
+      <span class="area">queryable data</span>
+      <span class="area">cross-system consistency</span>
+      <span class="area">no silent errors</span>
+    </div>
+
+    <div class="contact">
+      <span class="contact-label">get in touch</span>
+      <a href="mailto:hello@fidantic.com">hello@fidantic.com</a>
+    </div>
+
+  </div>
+</body>
+</html>
